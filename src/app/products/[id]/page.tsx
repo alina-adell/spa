@@ -2,6 +2,9 @@ import * as React from 'react';
 import { Navigation } from '@/components/Navigation';
 import { ProductDetailClient } from './ProductDetailClient';
 
+// Принудительно отключаем SSR
+export const dynamic = 'force-static';
+
 // Генерируем статические параметры для всех продуктов из API
 export async function generateStaticParams() {
   try {

@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: 'export', // Временно отключаем для тестирования
+  // Временно отключаем static export для отладки
+  // output: 'export',
   trailingSlash: true,
   images: {
     unoptimized: true,

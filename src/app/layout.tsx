@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description: 'Single Page Application для управления продуктами',
 };
 
+// Принудительно отключаем SSR для статического экспорта
+export const dynamic = 'force-static';
+
 export default function RootLayout({
   children,
 }: {

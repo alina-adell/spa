@@ -2,7 +2,10 @@ import * as React from 'react';
 import { Navigation } from '@/components/Navigation';
 import { EditProductClient } from './EditProductClient';
 
-// Генерируем статические параметры для всех продуктов из API
+// Принудительно отключаем SSR
+export const dynamic = 'force-static';
+
+// Генерируем статические параметры для редактирования продуктов
 export async function generateStaticParams() {
   try {
     const response = await fetch('https://fakestoreapi.com/products');
