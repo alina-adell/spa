@@ -1,8 +1,15 @@
-# SPA Products App
+# 🛍️ SPA Products App
 
-Современное одностраничное приложение (SPA) для управления продуктами, созданное с использованием Next.js, TypeScript и Zustand.
+![Next.js](https://img.shields.io/badge/Next.js-15.0.1-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.1-38B2AC?style=for-the-badge&logo=tailwind-css)
+![Zustand](https://img.shields.io/badge/Zustand-5.0.0-orange?style=for-the-badge)
 
-## 🚀 Демо
+Современное **Single Page Application (SPA)** для управления продуктами, созданное с использованием передовых веб-технологий. Приложение демонстрирует лучшие практики современной фронтенд разработки.
+
+## 🌟 Demo
+
+🔗 **[Посмотреть приложение](https://alina-adell.github.io/spa/)**
 
 - **GitHub Pages**: [https://belchenak.github.io/SPA](https://belchenak.github.io/SPA)
 - **GitHub Repository**: [https://github.com/belchenak/SPA](https://github.com/belchenak/SPA)
