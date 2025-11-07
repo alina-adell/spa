@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:spa": "NODE_ENV=production next build -c next.config.spa.js",
     "start": "next start",
     "lint": "next lint",
     "export": "npm run build"

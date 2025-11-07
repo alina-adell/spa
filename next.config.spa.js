@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Временно отключаем статический экспорт для тестирования
-  // output: "export",
-  distDir: "out",
+  // Убираем output: 'export' для обычной сборки
+  distDir: 'out',
   trailingSlash: true,
   images: {
     unoptimized: true,
@@ -14,6 +13,9 @@ const nextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true,
+  },
+  experimental: {
+    appDir: true,
   },
 };
 
