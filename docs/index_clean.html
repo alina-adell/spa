@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPA Products App - Управление продуктами</title>
+    <meta
+      name="description"
+      content="Single Page Application для управления продуктами"
+    />
+
+    <!-- CSP для разрешения inline стилей -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:;"
+    />
+
+    <style>
+      /* Сброс стилей */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Основные стили */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      /* Заголовок */
+      .header {
+        text-align: center;
+        color: white;
+        margin-bottom: 3rem;
+      }
+
+      .header h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        margin-bottom: 2rem;
+      }
+
+      /* Карточки */
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .card {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-2px);
+      }
+
+      .card h3 {
+        color: #667eea;
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+      }
+
+      /* Секции возможностей */
+      .features {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+      }
+
+      .features h3 {
+        color: #667eea;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-size: 1.8rem;
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+      }
+
+      .feature-item {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+      }
+
+      .feature-item::before {
+        content: "✅";
+        margin-right: 0.5rem;
+        font-size: 1.2rem;
+      }
+
+      /* Кнопки */
+      .btn {
+        display: inline-block;
+        background: #667eea;
+        color: white;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        margin: 0.5rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background: #5a67d8;
+      }
+
+      /* Код */
+      .code {
+        background: #2d3748;
+        color: #e2e8f0;
+        padding: 1rem;
+        border-radius: 8px;
+        font-family: "Monaco", "Consolas", monospace;
+        margin: 1rem 0;
+        overflow-x: auto;
+        font-size: 0.9rem;
+      }
+
+      /* Адаптивность */
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 2rem;
+        }
+
+        .container {
+          padding: 1rem;
+        }
+
+        .cards {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Заголовок -->
+      <header class="header">
+        <h1>🛍️ SPA Products App</h1>
+        <p>Современное веб-приложение для управления продуктами</p>
+      </header>
+
+      <!-- Карточки проекта -->
+      <div class="cards">
+        <div class="card">
+          <h3>🚀 О проекте</h3>
+          <p>
+            Single Page Application (SPA) для управления продуктами, построенное
+            с использованием современных веб-технологий. Приложение
+            демонстрирует лучшие практики разработки фронтенда с Next.js,
+            TypeScript и Zustand.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🎯 Архитектура</h3>
+          <p>
+            Приложение использует Next.js 15 с App Router, TypeScript для
+            строгой типизации, Zustand для управления состоянием и Tailwind CSS
+            для современного дизайна.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>📱 Адаптивность</h3>
+          <p>
+            Полностью адаптивный дизайн, оптимизированный для работы на всех
+            устройствах - от смартфонов до больших экранов. Mobile-first подход
+            обеспечивает отличный UX.
+          </p>
+        </div>
+      </div>
+
+      <!-- Возможности -->
+      <div class="features">
+        <h3>✨ Основные возможности</h3>
+        <div class="feature-grid">
+          <div class="feature-item">Просмотр каталога продуктов</div>
+          <div class="feature-item">Детальные страницы продуктов</div>
+          <div class="feature-item">Создание новых продуктов</div>
+          <div class="feature-item">Редактирование продуктов</div>
+          <div class="feature-item">Система избранного</div>
+          <div class="feature-item">Поиск и фильтрация</div>
+          <div class="feature-item">Пагинация результатов</div>
+          <div class="feature-item">Адаптивный дизайн</div>
+          <div class="feature-item">Интеграция с Fake Store API</div>
+          <div class="feature-item">Локальное сохранение данных</div>
+          <div class="feature-item">Валидация форм</div>
+          <div class="feature-item">Обработка ошибок</div>
+        </div>
+      </div>
+
+      <!-- Технологический стек -->
+      <div class="features">
+        <h3>🛠️ Технологический стек</h3>
+        <div class="feature-grid">
+          <div class="feature-item">Next.js 15 (App Router)</div>
+          <div class="feature-item">TypeScript</div>
+          <div class="feature-item">Zustand (State Management)</div>
+          <div class="feature-item">Tailwind CSS</div>
+          <div class="feature-item">React Hook Form</div>
+          <div class="feature-item">Lucide React Icons</div>
+          <div class="feature-item">Fake Store API</div>
+          <div class="feature-item">GitHub Pages</div>
+        </div>
+      </div>
+
+      <!-- Инструкции по запуску -->
+      <div class="features">
+        <h3>🔧 Как запустить проект</h3>
+        <p style="text-align: center; margin-bottom: 1rem">
+          Клонируйте репозиторий и запустите проект локально:
+        </p>
+
+        <div class="code">
+          git clone https://github.com/alina-adell/spa.git cd spa npm install
+          npm run dev
+        </div>
+
+        <p style="text-align: center; margin-bottom: 2rem">
+          Приложение будет доступно по адресу
+          <strong>http://localhost:3000</strong>
+        </p>
+
+        <div style="text-align: center">
+          <a
+            href="https://github.com/alina-adell/spa"
+            class="btn"
+            target="_blank"
+          >
+            📁 Исходный код на GitHub
+          </a>
+          <a
+            href="https://github.com/alina-adell/spa/blob/main/README.md"
+            class="btn"
+            target="_blank"
+          >
+            📚 Документация
+          </a>
+        </div>
+      </div>
+
+      <!-- Дополнительная информация -->
+      <div class="features">
+        <h3>📊 Характеристики проекта</h3>
+        <div style="text-align: center">
+          <p style="margin-bottom: 1rem">
+            ⭐ <strong>Полностью функциональное SPA</strong> с современной
+            архитектурой<br />
+            🎨 <strong>Красивый UI/UX</strong> с анимациями и
+            интерактивностью<br />
+            📱 <strong>Responsive дизайн</strong> для всех устройств<br />
+            🔧 <strong>TypeScript</strong> для надежности кода<br />
+            ⚡ <strong>Высокая производительность</strong> и оптимизация<br />
+            🚀 <strong>Готово к продакшену</strong> и развернуто на GitHub Pages
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

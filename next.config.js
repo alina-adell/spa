@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Отключаем статический экспорт для development
-  // output: 'export',
+  output: "export",
+  distDir: "out",
   trailingSlash: true,
   images: {
     unoptimized: true,
@@ -13,6 +13,10 @@ const nextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true,
+  },
+  // Отключаем статическую оптимизацию для проблемных страниц
+  experimental: {
+    appDir: true,
   },
 };
 

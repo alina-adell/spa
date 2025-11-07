@@ -2,10 +2,8 @@ import * as React from 'react';
 import { Navigation } from '@/components/Navigation';
 import { EditProductClient } from './EditProductClient';
 
-// Пустая функция для соответствия требованиям статического экспорта
-export async function generateStaticParams() {
-  return [];
-}
+// Принудительно отключаем SSR
+export const dynamic = 'force-dynamic';
 
 export default function EditProductPage({ params }: { params: { id: string } }) {
   return (

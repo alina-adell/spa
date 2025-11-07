@@ -38,11 +38,6 @@ export const ProductCard = ({ product }: ProductCardProps) => {
     }
   };
 
-  const handleEditClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    e.stopPropagation();
-    router.push(`/edit-product/${product.id}`);
-  };
-
   return (
     <div 
       onClick={handleCardClick}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alina-adell.github.io/spa/sitemap.xml

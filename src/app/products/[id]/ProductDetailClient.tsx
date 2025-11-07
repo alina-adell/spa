@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useProductsStore } from '@/store/products';
 import { Product } from '@/types';
-import { Heart, Trash2, ArrowLeft, Edit } from 'lucide-react';
+import { Heart, Trash2, ArrowLeft } from 'lucide-react';
 import { formatPrice } from '@/lib/utils';
 import Image from 'next/image';
 
@@ -35,10 +35,6 @@ export function ProductDetailClient({ productId }: ProductDetailClientProps) {
       deleteProduct(product.id);
       router.push('/products');
     }
-  };
-
-  const handleEditClick = () => {
-    router.push(`/edit-product/${productId}`);
   };
 
   if (!product) {
@@ -104,14 +100,6 @@ export function ProductDetailClient({ productId }: ProductDetailClientProps) {
                     fill={product.isLiked ? 'currentColor' : 'none'}
                   />
                 </button>
-                {product.isUserCreated && (
-                  <button
-                    onClick={handleEditClick}
-                    className="p-3 rounded-full bg-gray-100 text-gray-600 hover:bg-blue-50 hover:text-blue-500 transition-colors"
-                  >
-                    <Edit size={24} />
-                  </button>
-                )}
                 <button
                   onClick={handleDeleteClick}
                   className="p-3 rounded-full bg-gray-100 text-gray-600 hover:bg-red-50 hover:text-red-500 transition-colors"
