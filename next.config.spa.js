@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Убираем output: 'export' для обычной сборки
-  distDir: 'out',
+  distDir: "out",
   trailingSlash: true,
   images: {
     unoptimized: true,
